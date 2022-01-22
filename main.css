@@ -3,7 +3,7 @@
 	margin: 0;
 }
 html {
-	background: #DDFFBC;
+	background: #d9ffb3;
 }
 nav {
 	background: #91C788;
@@ -20,7 +20,7 @@ nav div a {
 }
 nav img {
 	height: 25px;
-	padding: 0px 15px;
+	padding: 0px 20px;
 }
 nav a:hover {
 	background: #DDFFBC;
@@ -33,28 +33,30 @@ content {
 	height: 600px;
 	overflow: hide;
 }
-content div {
-	display: inline-block;
-	height: 100%;
-}
 content div h2 {
-	position: relative;
-	top: 20px;
-	left: 20px;
+	margin: 20px;
 	font-size: 35px;
 	font-weight: normal;
+	text-decoration: underline;
 }
-content .one {
+content div li {
+	font-size: 24px;
+}
+.one {
+	display: inline-block;
+	height: 100%;
 	width: 30%;
-	background: #f0ffe0;
+	background: #e6ffcc;
 }
-content .two {
-	width: 70%;
+.two {
+	display: inline-block;
+	height: 100%;
+	width: 40%;
 }
 footer {
 	display: block;
 	background: #52734D;
-	height: 70px;
+	height: 65px;
 }
 footer p {
 	text-align: center;
