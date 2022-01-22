@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Lato";
+  src: url('fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
 *{
 	font-family: "Lato";
 	margin: 0;
@@ -34,7 +38,7 @@ content {
 	overflow: hide;
 }
 content div h2 {
-	margin: 20px;
+	margin: 20px 30px;
 	font-size: 35px;
 	font-weight: normal;
 	text-decoration: underline;
