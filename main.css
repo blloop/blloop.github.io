@@ -24,7 +24,7 @@ nav div a {
 }
 nav img {
 	height: 25px;
-	padding: 0px 20px;
+	padding: 0px 15px;
 }
 nav a:hover {
 	background: #DDFFBC;
@@ -47,15 +47,35 @@ content div li {
 	font-size: 24px;
 }
 .one {
+	display: block;
+	height: 60%;
+}
+.two {
+	display: block;
+	height: 40%;
+	background: #e6ffcc;
+}
+.three {
 	display: inline-block;
 	height: 100%;
 	width: 30%;
 	background: #e6ffcc;
 }
-.two {
+.four {
 	display: inline-block;
 	height: 100%;
 	width: 40%;
+}
+.five {
+	display: inline-block;
+	height: 50%;
+	width: 50%;
+	background: #e6ffcc;
+}
+.six {
+	display: inline-block;
+	height: 50%;
+	width: 50%;
 }
 footer {
 	display: block;
