@@ -1,76 +1,67 @@
 :root {
-	--color-text: #E9D5DA;
-	--color-main: #827397;
-	--frame-light: #4D4C7D;
-	--frame-dark: #363062;
+	--blue: #456EA5;
+	--grey: #D2CFC6;
 }
 
 @font-face {
-  font-family: "Quicksand";
-  src: url('fonts/Quicksand/Quicksand-Regular.ttf') format('truetype');
+  font-family: "Tahoma_8";
+  src: url('fonts/Tahoma8px.ttf') format('truetype');
 }
 
 * {
 	box-sizing: border-box;
-	font-family: "Quicksand";
-	color: var(--color-text);
+	font-family: "Tahoma_8";
+	font-size: 25px;
+	letter-spacing: 1px;
 	margin: 0;
 	padding: 0;
 }
 
 html {
-	background: var(--color-main);
+	background: black;
 }
 
 body {
-	background: var(--frame-dark);
-	width: 1500px;
+	background: var(--blue);
+	width: 1000px;
 	max-width: 100vw;
 	margin-left: auto;
 	margin-right: auto;
   overflow-y: overlay;
 }
 
-nav {
-	background: var(--frame-light);
-	height: 100px;
+.desktop {
+	height: 600px;
+	width: 100%;
+	color: white;
 }
 
-nav a {
-	display: inline-block;
-	width: 30vw;
-	max-width: 450px;
-	height: 50px;
-	margin: 50px 0 0;
-	font-size: 30px;
-	text-align: center;
-	text-decoration: none;
+#taskbar {
+	height: 45px;
+	width: 100%;
+	background: var(--grey);
+	font-weight: bold;
 }
 
-nav a:hover {
-	text-decoration: underline;
-	background: var(--color-main);
+.start {
+	height: 35px;
+	width: 90px;
+	margin: 3px 0;
+	display: flex;
+	align-items: center;
 }
 
-button {
-	background: var(--color-main);
-	width: 80vw;
-	max-width: 1200px;
-	/* TODO:  MARGIN IS NOT ADAPTIVE */
-	margin: 30px 100px;
-	padding: 30px 0;
-	border-radius: 50px;
+.start img {
+	height: 24px;
 }
 
-footer {
-	background: var(--frame-light);
-	display: block;
-	height: auto;
+.start * {
+	margin-left: 5px;
 }
 
-footer p {
-	text-align: center;
-	font-size: 20px;
-	padding: 20px 0;
-	margin: 0 auto;
+/* TASKBAR BORDERS */
+#taskbar, .start {
+	border-width: 3px;
+	border-style: solid;
+	border-color: #FFFFFF #404040 #404040 #FFFFFF;
 }
