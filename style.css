@@ -1,5 +1,5 @@
 :root {
-	--blue: #456EA5;
+	--blue: #3A6EA5;
 	--grey: #D2CFC6;
 }
 
@@ -11,10 +11,9 @@
 * {
 	box-sizing: border-box;
 	font-family: "Tahoma_8";
-	font-size: 25px;
-	letter-spacing: 1px;
 	margin: 0;
 	padding: 0;
+	-webkit-font-smoothing : none;
 }
 
 html {
@@ -29,7 +28,7 @@ body {
 	max-width: 100vw; 
 	margin-left: auto;
 	margin-right: auto;*/
-  overflow-y: overlay;
+  	overflow-y: overlay;
 }
 
 .desktop {
@@ -38,15 +37,36 @@ body {
 	color: white;
 }
 
+.icon {
+	width: 110px;
+	height: auto;
+	padding: 5px 0;
+	margin: 0 5px 5px;
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	border: 1px solid var(--blue);
+	text-align: center;
+}
+
+.select {
+	border: 1px dotted white;
+}
+
+.icon img {
+	height: 40px;
+}
+
 #taskbar {
 	background: var(--grey);
 	height: 45px;
 	max-height: 45px;
 	display: flex;
 	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 1px;
 	border-top: 3px solid white;
 	/* TEMPORARY STYLE FIX */
-	overflow-x: overlay;
+	overflow-x: hidden;
 }
 
 #taskbar > div {
@@ -63,6 +83,9 @@ body {
 	min-width: 85px;
 	padding: 2px;
 	align-items: center;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #FFFFFF #404040 #404040 #FFFFFF;
 }
 
 .start * {
@@ -70,10 +93,8 @@ body {
 	display: inline;
 }
 
-.start {
-	border-width: 3px;
-	border-style: solid;
-	border-color: #FFFFFF #404040 #404040 #FFFFFF;
+.start:hover {
+	cursor: pointer;
 }
 
 .pin {
@@ -104,7 +125,7 @@ body {
 	border-color: #FFFFFF #818181 #818181 #FFFFFF;
 }
 
-.time {
+#time {
 	background: var(--grey);
 	width: 100px;
 	height: 36px;
