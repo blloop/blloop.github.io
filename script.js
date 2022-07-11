@@ -36,3 +36,23 @@ function clearSelect() {
     // selected = undefined;
     
 }
+
+// Sets system time to the browser's time
+var current = new Date();
+var time = "<img src='img/speaker.png'>";
+
+if (current.getHours() > 12) {
+    current.setHours(current.getHours() - 12);
+    ampm = "PM";
+} else {
+    ampm = "AM";
+}
+
+time += `<div>${current.getHours()}:`;
+if (current.getMinutes() < 10) {
+    time += "0";
+}
+time += current.getMinutes() + ampm + "</div>";
+console.log(time);
+
+document.getElementById("time").innerHTML = time;

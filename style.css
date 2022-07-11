@@ -13,6 +13,7 @@
 	font-family: "Tahoma_8";
 	margin: 0;
 	padding: 0;
+	user-select: none;
 	-webkit-font-smoothing : none;
 }
 
@@ -38,22 +39,22 @@ body {
 }
 
 .icon {
-	width: 110px;
+	width: 90px;
 	height: auto;
-	padding: 5px 0;
+	padding: 10px 0px;
 	margin: 0 5px 5px;
-	font-size: 20px;
+	font-size: 18px;
 	letter-spacing: 0.5px;
 	border: 1px solid var(--blue);
 	text-align: center;
 }
 
-.select {
-	border: 1px dotted white;
-}
-
 .icon img {
 	height: 40px;
+}
+
+.select {
+	border: 1px dotted white;
 }
 
 #taskbar {
@@ -69,7 +70,7 @@ body {
 	overflow-x: hidden;
 }
 
-#taskbar > div {
+#taskbar > div:not(#time) {
 	margin: 3px;
 }
 
@@ -127,12 +128,18 @@ body {
 
 #time {
 	background: var(--grey);
-	width: 100px;
+	width: auto;
 	height: 36px;
-	padding: 5px 10px;
+	padding: 5px;
 	font-weight: 500;
-	margin-left: auto;
+	margin: 3px 3px 3px auto;
+	display: flex;
+	align-items: center;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #818181 #FFFFFF #FFFFFF #818181;
+}
+
+#time > div {
+	padding: 0 20px;
 }
