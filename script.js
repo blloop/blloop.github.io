@@ -1,4 +1,5 @@
 // Script file for interactive components
+// document.querySelectorAll("body").imageSmoothingEnabled = false;
 
 // Render desktop icons from icon.js file
 output = "";
@@ -37,9 +38,25 @@ function clearSelect() {
     
 }
 
+// Toggles start panel with start button
+
+var startOpen = false;
+
+function toggleStart() {
+
+    if (startOpen) {
+        document.getElementById("start_panel").classList.remove('start_open');
+        document.getElementById("start").classList.remove('start_clicked');
+    }
+    else {
+        document.getElementById("start_panel").classList.add('start_open');
+        document.getElementById("start").classList.add('start_clicked');
+    }
+    startOpen = !startOpen;
+}
+
 // Sets system time to the browser's time
 var current = new Date();
-var time = "<img src='img/speaker.png'>";
 
 if (current.getHours() > 12) {
     current.setHours(current.getHours() - 12);
@@ -48,11 +65,12 @@ if (current.getHours() > 12) {
     ampm = "AM";
 }
 
-time += `<div>${current.getHours()}:`;
+var time = `${current.getHours()}:`;
 if (current.getMinutes() < 10) {
     time += "0";
 }
-time += current.getMinutes() + ampm + "</div>";
-console.log(time);
+time += current.getMinutes() + ampm;
+console.log("System Time: " + time);
 
+time = "<img src='img/speaker.png'><div>" + time + '</div';
 document.getElementById("time").innerHTML = time;

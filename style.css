@@ -1,6 +1,6 @@
 :root {
 	--blue: #3A6EA5;
-	--grey: #D2CFC6;
+	--grey: #D6D6CE;
 }
 
 @font-face {
@@ -29,7 +29,8 @@ body {
 	max-width: 100vw; 
 	margin-left: auto;
 	margin-right: auto;*/
-  	overflow-y: overlay;
+  	/* overflow-y: overlay; */
+	overflow-y: hidden;
 }
 
 .desktop {
@@ -78,7 +79,7 @@ body {
 	height: 24px;
 }
 
-.start {
+#start {
 	height: 35px;
 	width: 85px;
 	min-width: 85px;
@@ -89,13 +90,53 @@ body {
 	border-color: #FFFFFF #404040 #404040 #FFFFFF;
 }
 
-.start * {
+#start * {
 	vertical-align: middle;
 	display: inline;
 }
 
-.start:hover {
+#start:hover {
 	cursor: pointer;
+}
+
+.start_clicked {
+	border-color: #404040 #FFFFFF #FFFFFF #404040 !important;
+}
+
+#start_panel {
+	background: var(--grey);
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+	bottom: 39px;
+	left: 3px;
+	height: 450px;
+	width: 300px;
+	font-size: 20px;
+	letter-spacing: 1px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #FFFFFF #404040 #404040 #FFFFFF;
+}
+
+.start_open {
+	visibility: visible !important;
+}
+
+.start_item {
+	display: flex;
+	height: 50px;
+	background: #08216B;
+}
+
+.start_item * {
+	margin: auto 10px;
+	font-weight: 100;
+	color: white;
+}
+
+.start_item img {
+	height: 35px;
 }
 
 .pin {
