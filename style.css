@@ -39,6 +39,11 @@ body {
 	color: white;
 }
 
+#icons {
+	height: 100%;
+	overflow-y: hidden;
+}
+
 .icon {
 	width: 90px;
 	height: auto;
@@ -99,10 +104,6 @@ body {
 	cursor: pointer;
 }
 
-.start_clicked {
-	border-color: #404040 #FFFFFF #FFFFFF #404040 !important;
-}
-
 #start_panel {
 	background: var(--grey);
 	visibility: hidden;
@@ -112,11 +113,16 @@ body {
 	left: 3px;
 	height: 450px;
 	width: 300px;
+	max-width: 95%;
 	font-size: 20px;
 	letter-spacing: 1px;
 	border-width: 3px;
 	border-style: solid;
 	border-color: #FFFFFF #404040 #404040 #FFFFFF;
+}
+
+.start_clicked {
+	border-color: #404040 #FFFFFF #FFFFFF #404040 !important;
 }
 
 .start_open {
