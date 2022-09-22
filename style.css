@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -16,51 +17,83 @@ html {
   border-radius: 40px;
 }
 
+.link:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+/* Custom classes */
+
+.smooth {    
+	transition-delay: 0s;
+	transition-duration: 100ms;
+	transition-timing-function: ease-in-out;
+	transition-property: color, background-color;
+}
+
 
 /* Popup Styling */
 
-#windows, #calculator {
+.popup {
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 60vw;
   height: 80vh;
   z-index: 10;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: white;
+  background-color: black;
 }
 
-#windows.active, #calculator.active {
+.popup.active {
   transform: translate(-50%, -50%) scale(1);
-}
-
-.close-button {
-  cursor: pointer;
-  float: right;
-  display: block;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
 }
 
 #overlay {
   position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
+  opacity: 0;
+  transition: 200ms ease-in-out;
   pointer-events: none;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 #overlay.active {
   opacity: 1;
   pointer-events: all;
-} 
+}
+
+.tab {
+  height: 65px;
+  background-color: #827397;
+  border-radius: 10px 10px 0 0;
+}
+
+.close-button {
+  padding: 0 20px;
+  height: 65px;
+  cursor: pointer;
+  float: right;
+  border: none;
+  border-radius: 0 10px 0 0;
+  background: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e9d5da
+}
+
+.close-button:hover {
+  color: darkred;
+  background-color: #e9d5da;
+}
+
+embed {
+  border-radius: 0 0 10px 10px;
+  max-height: calc(100% - 5px);
+}
