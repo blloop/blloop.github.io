@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script defer src="script.js"></script>
-	<script src="icons.js"></script>
-	<title> Windows 2000 </title>
-</head>
-<body>
-	<div class="desktop" onclick="clearSelect()">
-		<div id="icons"></div>		
-	</div>
+<html lang="en">
 
-	<div id="start_panel">
-		<div class="start_item">
-			<img src="img/computer.png" alt="My Computer">
-			<h2>Hello</h2>
-		</div>
-	</div>
+  <head>
 
-	<div id="taskbar">
-		<div id="start" onclick="toggleStart()"> 
-			<img src="img/start.png" alt="Start Button">
-			<p> Start </p>
-		</div>
-		<div class="divider"><div></div><div></div></div>
-		<div class="pin">
-			<img src="img/documents.png" alt="My Documents">
-		</div>
-		<div class="pin">
-			<img src="img/internet.png" alt="Internet Explorer">
-		</div>
-		<div class="pin">
-			<img src="img/outlook.png" alt="Outlook Express">
-		</div>
-		<div class="divider"><div></div><div></div></div>
-		<div id="time"></div>
-	</div>
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Personal Webpage </title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+
+
+    <!-- Windows Button -->
+    <button class="link" data-open="#windows"> Windows 2000 </button>
+
+    <!-- Calculator Button -->
+    <button class="link" data-open="#calculator"> Calculator </button>
+
+    <!-- Common Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Windows Overlay -->
+    <div id="windows">
+      <button data-close="#windows" class="close-button">&times;</button>
+      <embed type="text/html" src="windows/index.html" width="100%" height="100%">
+    </div>
+
+    <!-- Calculator Overlay -->
+    <div id="calculator">
+      <button data-close="#calculator" class="close-button">&times;</button>
+      <embed type="text/html" src="calculator/index.html" width="500" height="100%">
+    </div>
+
+  </body> 
+
 </html>
