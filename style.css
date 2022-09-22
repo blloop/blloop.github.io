@@ -1,3 +1,10 @@
+:root {
+  --main-bg: #4d4c7d;
+  --main-deep: #363062;
+  --main-light: #827397;
+  --main-bright: #e9d5da;
+}
+
 * {
   box-sizing: border-box;
   font-size: 18px;
@@ -6,7 +13,11 @@
 }
 
 html {
-  background: #333333;
+  background: var(--main-bg);
+}
+
+nav {
+  margin-bottom: 10px;
 }
 
 .link {
@@ -14,12 +25,15 @@ html {
   width:  60vw;
   margin: 10px 20vw;
   height: 80px;
+  border: 2px solid var(--main-light);
   border-radius: 40px;
+  background-color: var(--main-bright);
+  color: var(--main-bg);
 }
 
 .link:hover {
-  background-color: grey;
-  color: white;
+  background-color: var(--main-light);
+  color: var(--main-bright);
   cursor: pointer;
 }
 
@@ -37,7 +51,7 @@ html {
 
 .popup {
   position: fixed;
-  top: 45%;
+  top: 50%;
   left: 50%;
   width: 60vw;
   height: 80vh;
@@ -71,8 +85,13 @@ html {
 
 .tab {
   height: 65px;
-  background-color: #827397;
+  background-color: var(--main-light);
   border-radius: 10px 10px 0 0;
+}
+
+.tab button:not(.close-button) {
+  margin: 10px;
+  padding: 10px 15px;
 }
 
 .close-button {
@@ -85,7 +104,7 @@ html {
   background: none;
   font-size: 3rem;
   font-weight: bold;
-  color: #e9d5da
+  color: var(--main-bright);
 }
 
 .close-button:hover {
@@ -95,5 +114,20 @@ html {
 
 embed {
   border-radius: 0 0 10px 10px;
-  max-height: calc(100% - 5px);
+  max-height: calc(100% - 65px);
+  z-index: 10;
+}
+
+@media only screen and (max-width: 800px) {
+  .popup {
+    width: 80vw;
+    height: 90vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .popup {
+    width: 100vw;
+    height: 100vh;
+  }
 }

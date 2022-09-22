@@ -37,3 +37,30 @@ function close_popup(element) {
   element.classList.remove('active');
   overlay.classList.remove('active');
 };
+
+function zoomIn(name) {
+  var embedPage = document.getElementById(name).lastElementChild;
+  var currentZoom = embedPage.style.zoom;
+  console.log(currentZoom);
+  var zoomNum = parseInt(currentZoom.slice(0, currentZoom.length - 1));
+  console.log("Adding 10% to " + zoomNum.toString());
+  if (zoomNum >= 300) return false;
+  zoomNum += 10;
+  embedPage.style.zoom = zoomNum.toString() + "%";
+  console.log(embedPage.style.zoom);
+
+  // if (currentZoom >= 300) return false;
+  // embedPage.style.zoom = (currentZoom + 10) + "%"; 
+}
+
+function zoomOut(name) {
+  var embedPage = document.getElementById(name).lastElementChild;
+  var currentZoom = embedPage.style.zoom;
+  console.log(currentZoom);
+  var zoomNum = parseInt(currentZoom.slice(0, currentZoom.length - 1));
+  console.log("Adding 10% to " + zoomNum.toString());
+  if (zoomNum <= 10) return false;
+  zoomNum -= 10;
+  embedPage.style.zoom = zoomNum.toString() + "%";
+  console.log(embedPage.style.zoom);
+}

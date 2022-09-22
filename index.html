@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Personal Webpage </title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script defer src="script.js"></script>
+    
   </head>
 
   <body>
 
-    <span style="display: block; height: 100px; background-color: black;"></span>
+    <nav>
+      <span style="display: block; height: 100px; background-color: #363062;"></span>
+    </nav>    
+
     <!-- Windows Button -->
     <button class="link smooth" data-open="#windows"> Windows 2000 </button>
-
     <!-- Calculator Button -->
     <button class="link smooth" data-open="#calculator"> Calculator </button>
 
@@ -25,17 +29,21 @@
     <!-- Windows Overlay -->
     <div id="windows", class="popup">
       <div class="tab">
+        <button onclick="zoomOut('windows')"> - </button>
+        <button onclick="zoomIn('windows')"> + </button>
         <button data-close="#windows" class="close-button smooth">&times;</button>
       </div>      
-      <embed type="text/html" src="windows/index.html" width="100%" height="100%">
+      <embed type="text/html" src="windows/index.html" width="100%" height="100%" style="zoom: 100%">
     </div>
 
     <!-- Calculator Overlay -->
     <div id="calculator" class="popup fade">
       <div class="tab">
+        <button onclick="zoomOut('calculator')"> - </button>
+        <button onclick="zoomIn('calculator')"> + </button>
         <button data-close="#calculator" class="close-button smooth">&times;</button>
       </div>      
-      <embed type="text/html" src="calculator/index.html" width="100%" height="100%">
+      <embed type="text/html" src="calculator/index.html" width="100%" height="100%" style="zoom: 100%">
     </div>
 
   </body> 
