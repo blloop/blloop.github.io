@@ -38,29 +38,37 @@ function close_popup(element) {
   overlay.classList.remove('active');
 };
 
-function zoomIn(name) {
-  var embedPage = document.getElementById(name).lastElementChild;
-  var currentZoom = embedPage.style.zoom;
-  console.log(currentZoom);
-  var zoomNum = parseInt(currentZoom.slice(0, currentZoom.length - 1));
-  console.log("Adding 10% to " + zoomNum.toString());
-  if (zoomNum >= 300) return false;
-  zoomNum += 10;
-  embedPage.style.zoom = zoomNum.toString() + "%";
-  console.log(embedPage.style.zoom);
-
-  // if (currentZoom >= 300) return false;
-  // embedPage.style.zoom = (currentZoom + 10) + "%"; 
-}
-
 function zoomOut(name) {
   var embedPage = document.getElementById(name).lastElementChild;
   var currentZoom = embedPage.style.zoom;
-  console.log(currentZoom);
+  // console.log(currentZoom);
   var zoomNum = parseInt(currentZoom.slice(0, currentZoom.length - 1));
-  console.log("Adding 10% to " + zoomNum.toString());
+  // console.log("Adding 10% to " + zoomNum.toString());
+  if (zoomNum >= 300) return false;
+  zoomNum += 10;
+  embedPage.style.zoom = zoomNum.toString() + "%";
+  // console.log(embedPage.style.zoom);
+}
+
+function zoomIn(name) {
+  var embedPage = document.getElementById(name).lastElementChild;
+  var currentZoom = embedPage.style.zoom;
+  // console.log(currentZoom);
+  var zoomNum = parseInt(currentZoom.slice(0, currentZoom.length - 1));
+  // console.log("Adding 10% to " + zoomNum.toString());
   if (zoomNum <= 10) return false;
   zoomNum -= 10;
   embedPage.style.zoom = zoomNum.toString() + "%";
-  console.log(embedPage.style.zoom);
+  // console.log(embedPage.style.zoom);
+}
+
+function toggleFullScreen(name) {
+  var embedPage = document.getElementById(name).lastElementChild;
+  if (embedPage.requestFullscreen) { /* Default Browsers */
+    embedPage.requestFullscreen();
+  } else if (embedPage.webkitRequestFullscreen) { /* Safari */
+    embedPage.webkitRequestFullscreen();
+  } else if (embedPage.msRequestFullscreen) { /* IE11 */
+    embedPage.msRequestFullscreen();
+  }
 }

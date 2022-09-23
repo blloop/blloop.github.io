@@ -34,28 +34,39 @@ body {
 
 #keybox {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 80%;
-    height: 50%;
-    margin: 5% 10% 20% 10%;
+    flex-direction: row;
+    width: 90%;
+    height: 55%;
+    margin: 5% 5% 10%;
+    gap: 10px;
 }
 
-.keyrow {
+#grey {
+    width: 200px;
+}
+
+#specials {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 10px;
+}
+
+#specials .key {
+    width: 60px;
+}
+
+#numbers {
+    display: flex;
+    flex-direction: row;
+}
+
+#operators {
     width: 100%;
-    height: 50px;
 }
 
 .key {
-    width: 50px;
-    height: 50px;
+    height: 60px;
+    border-radius: 50%;
     background-color: lightgrey;
-}
-
-.wide {
-    width: 113px;
 }
 
