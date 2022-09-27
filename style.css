@@ -54,7 +54,7 @@ nav {
   top: 50%;
   left: 50%;
   width: 60vw;
-  height: max(725px, 80vh);
+  height: min(730px, 100vh);
   z-index: 10;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
@@ -66,12 +66,20 @@ nav {
   transform: translate(-50%, -50%) scale(1);
 }
 
+#windows {
+  height: min(800px, 100vh);
+  width: min(1200px, 100vw);
+}
+
+#calculator {
+  height: min(740px, 100vh);
+  width: min(600px, 100vw);
+}
+
+
 #overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   opacity: 0;
   transition: 200ms ease-in-out;
   pointer-events: none;

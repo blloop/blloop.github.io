@@ -19,7 +19,7 @@
 
 * {
     color: white;
-    font-size: 64px;
+    font-size: 32px;
     font-family: Helvetica;
     font-weight: bold;
 }
@@ -48,6 +48,7 @@ body {
     width: 70%;
     margin: 0 15%;
     text-align: end;
+    font-size: 64px;
 }
 
 #keybox {
@@ -73,7 +74,12 @@ body {
 
 #specials .key {
     width: 60px;
+    color: black;
     background-color: var(--lightgrey);
+}
+
+#specials .key:active {
+    background-color: #FFFFFF;
 }
 
 #numbers {
@@ -88,6 +94,10 @@ body {
     background-color: var(--darkgrey);
 }
 
+#numbers .key:active {
+    background-color: #CCCCCC;
+}
+
 #operators {
     width: 100%;
     display: flex;
@@ -99,16 +109,22 @@ body {
     background-color: var(--orange);
 }
 
+#operators .key:active {
+    background-color: #FFDAB3;
+}
+
 .key {
     height: 60px;
-    border-radius: 50%;
+    border-radius: 30px;
+    transition: background-color 0.1s ease-out 0s;
 }
 
 .key:hover {
     cursor: pointer;
 }
 
-.key:active {
-    
+#numbers .wide {
+    width: 130px;
+    text-align: left;
+    padding: 10px 20px;
 }
-
