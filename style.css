@@ -20,6 +20,19 @@ nav {
   margin-bottom: 10px;
 }
 
+nav span h1 {
+  padding: 25px;
+  font-size: 40px;
+  color: var(--main-bright);
+}
+
+.desc {
+  padding: 20px 10vw;
+  font-size: 22px;
+  text-align: justify;
+  color: var(--main-bright);
+}
+
 .link {
   padding: 20px;
   width:  60vw;

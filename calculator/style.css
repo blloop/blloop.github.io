@@ -124,7 +124,7 @@ body {
 }
 
 #numbers .wide {
-    width: 130px;
+    flex-grow: 2;
     text-align: left;
     padding: 10px 20px;
 }
