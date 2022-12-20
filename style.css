@@ -17,7 +17,11 @@ body {
     top: 20px;
     left: 20px;
     border-radius: 16px;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(215, 215, 215);
+}
+
+#lightbulb {
+    width: 60px;
 }
 
 body {
