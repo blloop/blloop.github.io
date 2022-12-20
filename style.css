@@ -4,7 +4,19 @@
     font-size: 20px;
     font-family: Verdana, Tahoma, sans-serif;
     font-family: 'Courier New', Courier, monospace;
-    color: rgb(110, 255, 94);
+    color: rgb(92, 230, 96);
+    transition: 0.2s all ease-in-out;
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+}
+
+#toggle_button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 16px;
     background-color: rgb(50, 50, 50);
 }
 
@@ -15,7 +27,8 @@ body {
     text-align: center;
 }
 
-#title, #title a {
+#title,
+#title a {
     margin-top: 16px;
     text-align: center;
     font-size: 64px;
@@ -33,6 +46,8 @@ body {
 }
 
 hr {
-    border: 1px solid rgb(110, 255, 94);
+    background-color: rgb(92, 230, 96);
+    height: 2px;
+    border: 0px;
     margin: 16px 0;
 }
