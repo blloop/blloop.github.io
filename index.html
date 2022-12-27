@@ -7,31 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title> The name's Bill </title>
+    <title class="toggle"> The name's Bill </title>
 </head>
 
 <body>
+
     <header>
-        <button type="button" id="toggle_button" onclick="toggle_color()">
-            <img id="lightbulb" src="img/light_on.png">
+        <button onclick="toggle_color()" type="button" id="toggle_button" class="toggle-contrast">
+            <img id="lightbulb" src="img/light_on.png" alt="Lightbulb Icon">
         </button>
-        <p id="title"> The name's <a href="google.com">Bill</a></p>
-        <hr>
+        <p id="title" class="toggle"> The name's <a class="toggle">Bill</a></p>
+        <hr class="toggle-bg">
     </header>
+
     <section>
-        <p>
-            Howdy there
+        <div class="circle toggle-contrast"> | <br> Hello! <br> | </div>
+        <p class="toggle"> Simple Bio Paragraph </p>
+        <p class="toggle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim sit amet venenatis. Ipsum dolor sit
+            amet consectetur adipiscing elit. Adipiscing enim eu turpis egestas pretium aenean pharetra. Netus et
+            malesuada fames ac turpis egestas maecenas pharetra convallis. Ut diam quam nulla porttitor massa id neque
+            aliquam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Mi eget mauris pharetra
+            et ultrices neque. Amet nulla facilisi morbi tempus iaculis urna. Consectetur adipiscing elit duis
+            tristique. Pretium fusce id velit ut tortor pretium. Amet tellus cras adipiscing enim. Tortor id aliquet
+            lectus proin nibh nisl condimentum id. Senectus et netus et malesuada. Magna eget est lorem ipsum dolor sit
+            amet consectetur adipiscing.
         </p>
+        <hr class="toggle-bg">
     </section>
+
     <section>
-        <p>
-            . . .
-        </p>
+        <div id="box-row">
+            <div class="box toggle-contrast"></div>
+            <div class="box toggle-contrast"></div>
+            <div class="box toggle-contrast"></div>
+        </div>
+        <hr class="toggle-bg">
     </section>
+
     <footer>
-        <p>
-            The page be footin here
-        </p>
     </footer>
 </body>
 
