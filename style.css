@@ -1,7 +1,6 @@
 :root {
-    --white: rgb(215, 215, 215);
-    --green: rgb(92, 230, 96);
     --dark-grey: rgb(50, 50, 50);
+    --grey: rgb(128, 128, 128);
 }
 
 @font-face {
@@ -19,7 +18,6 @@
 }
 
 body {
-    background-color: var(--dark-grey);
     width: 900px;
     max-width: 72vw;
     margin: 0 auto;
@@ -30,12 +28,10 @@ p {
     margin-bottom: 24px;
 }
 
-.toggle {
-    color: var(--green);
-}
-
-.toggle-bg {
-    background-color: var(--green);
+hr {
+    height: 2px;
+    border: 0px;
+    margin: 24px 0;
 }
 
 #toggle_button {
@@ -43,9 +39,8 @@ p {
     top: 24px;
     left: 24px;
     padding: 0 12px;
-    border-radius: 48px;
+    border-radius: 50%;
     border: 2px solid var(--dark-grey);
-    background-color: var(--white);
 }
 
 #lightbulb {
@@ -68,23 +63,16 @@ p {
 }
 
 #title a:hover {
-    background-color: grey;
-}
-
-hr {
-    height: 2px;
-    border: 0px;
-    margin: 24px 0;
+    background-color: var(--grey);
 }
 
 .circle {
     margin: 24px auto;
     height: 400px;
     width: 400px;
-    max-width: 72vw;
-    max-height: 72vw;
+    max-width: 60vh;
+    max-height: 60vh;
     border-radius: 50%;
-    background-color: var(--white);
 
     display: flex;
     align-items: center;
@@ -102,6 +90,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     height: 400px;
+    max-height: 72vh;
     width: 100%;
     margin-bottom: 24px;
     padding-bottom: 48px;
@@ -111,7 +100,6 @@ hr {
     height: 100%;
     width: 30%;
     border-radius: 36px;
-    background-color: var(--white);
 }
 
 .box:hover {
@@ -122,11 +110,10 @@ hr {
 /* Adaptive Styles */
 
 @media only screen and (max-width: 800px) {
+
     #toggle_button {
         position: initial;
-        /* width: 40vw; */
         margin: 12px auto 0;
-        /* border-radius: 24px; */
     }
 
     #lightbulb {
