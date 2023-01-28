@@ -1,8 +1,6 @@
 :root {
     --light-green: #9cba92;
     --dark-green: #6f9669;
-    --dark-navy: rgb(86, 113, 137);
-    --light-navy: rgb(123, 143, 161);
     --light-tan: #eee3cb;
     --med-tan: #d7c0ae;
     --dark-tan: #7b635b;
@@ -23,7 +21,6 @@
 
 html {
     background-color: var(--dark-green);
-    /* background-color: var(--dark-navy); */
 }
 
 body {
@@ -35,22 +32,10 @@ body {
     color: var(--dark-tan);
     border-radius: 28px;
     background-color: var(--light-green);
-    /* background-color: var(--light-navy); */
 }
 
 body>*:nth-child(n+2) {
     margin-top: 24px;
-}
-
-header,
-section {
-    display: block;
-    width: 100%;
-    padding: 32px 40px;
-}
-
-img {
-    border-radius: 50% !important;
 }
 
 nav {
@@ -65,28 +50,28 @@ nav {
 }
 
 nav:hover {
-    height: 220px;
+    height: 250px;
 }
 
 nav p {
-    padding: 6px;
+    padding: 8px;
+    margin-bottom: 4px;
 }
 
-nav div {
+nav a {
+    display: inline-block;
+}
+
+nav a img {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    padding: 6px;
     cursor: pointer;
     transition: 0.2s background-color ease-in-out;
 }
 
-nav div:hover {
+nav img:hover {
     background-color: var(--med-tan);
-}
-
-footer:hover {
-    transform: translateX(8px);
-    transform: translateY(8px);
-    border: 0;
 }
 
 .inset {
@@ -97,9 +82,24 @@ footer:hover {
     background-color: var(--light-tan);
 }
 
+.textblock {
+    display: block;
+    width: 100%;
+    padding: 24px 40px;
+}
+
+.headshot {
+    border-radius: 50% !important;
+}
+
+.title {
+    font-size: 32px;
+}
+
 .subtitle {
     font-size: 32px;
     font-weight: bold;
+    margin-bottom: 6px;
 }
 
 @media only screen and (max-width: 1000px) {
