@@ -42,18 +42,15 @@ body>*:nth-child(n+2) {
     margin-top: 24px;
 }
 
-header, section {
+header,
+section {
     display: block;
     width: 100%;
     padding: 32px 40px;
 }
 
-header, section, nav {
-    border-radius: 28px;
-    border-width: 0 8px 8px 0;
-    border-color: var(--med-tan);
-    border-style: solid;
-    background-color: var(--light-tan);
+img {
+    border-radius: 50% !important;
 }
 
 nav {
@@ -92,6 +89,19 @@ footer:hover {
     border: 0;
 }
 
+.inset {
+    border-radius: 28px;
+    border-width: 0 8px 8px 0;
+    border-color: var(--med-tan);
+    border-style: solid;
+    background-color: var(--light-tan);
+}
+
+.subtitle {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 1000px) {
     nav {
         position: relative;
@@ -109,7 +119,7 @@ footer:hover {
         display: inline;
     }
 
-    nav div {        
+    nav div {
         display: inline-block;
         padding: 6px;
         width: 40px;
