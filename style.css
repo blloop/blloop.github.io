@@ -1,6 +1,8 @@
 :root {
     --light-green: #9cba92;
     --dark-green: #6f9669;
+    --light-navy: rgb(123, 143, 161);
+    --dark-navy: rgb(86, 113, 137);
     --light-tan: #eee3cb;
     --med-tan: #d7c0ae;
     --dark-tan: #7b635b;
@@ -21,6 +23,9 @@
 
 html {
     background-color: var(--dark-green);
+    background-color: var(--dark-navy);
+    background-image: url(img/wave2.png);
+    background-repeat: repeat;
 }
 
 body {
@@ -32,6 +37,9 @@ body {
     color: var(--dark-tan);
     border-radius: 28px;
     background-color: var(--light-green);
+    background-color: var(--light-navy);
+    background-image: url(img/wave.png);
+    background-repeat: repeat;
 }
 
 body>*:nth-child(n+2) {
@@ -74,6 +82,21 @@ nav img:hover {
     background-color: var(--med-tan);
 }
 
+.title {
+    font-size: 32px;
+}
+
+.subtitle {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.description {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
 .inset {
     border-radius: 28px;
     border-width: 0 8px 8px 0;
@@ -88,31 +111,51 @@ nav img:hover {
     padding: 24px 40px;
 }
 
+.narrow {
+    display: block;
+    padding: 12px 0 8px;
+}
+
+.card {
+    display: inline-block;
+    padding: 8px;
+    width: 32%;
+    transition: 0.1s transform ease-in-out;
+}
+
+.card:hover {
+    transform: translate(6px, 6px);
+    background-color: var(--med-tan);
+}
+
+.boxarrow {
+    margin: -8px auto 0 !important;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid var(--light-tan);
+}
+
 .headshot {
-    border-radius: 50% !important;
-}
-
-.title {
-    font-size: 32px;
-}
-
-.subtitle {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 6px;
+    border-radius: 32px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 @media only screen and (max-width: 1000px) {
+
+    body {
+        padding: 24px;
+    }
+
     nav {
         position: relative;
         width: 100%;
         left: 0;
         top: 0;
         margin: 12px auto 24px;
-    }
-
-    nav:hover {
-        height: 60px;
+        pointer-events: none;
     }
 
     nav * {
@@ -128,5 +171,43 @@ nav img:hover {
 
     nav p {
         display: none;
+    }
+
+    .textblock {
+        padding: 12px 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    p {
+        font-size: 18px;
+    }
+
+    .title,
+    .subtitle {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    nav {
+        height: 120px;
+    }
+
+    .headshot {
+        height: 200px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .title,
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .textblock {
+        padding: 8px;
     }
 }
