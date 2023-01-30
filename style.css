@@ -1,8 +1,8 @@
 :root {
-    --light-green: #9cba92;
-    --dark-green: #6f9669;
+    --light-green: #aed7a8;
+    --dark-green: #9cba92;
     --light-navy: rgb(123, 143, 161);
-    --dark-navy: rgb(86, 113, 137);
+    --dark-navy: #567189;
     --light-tan: #eee3cb;
     --med-tan: #d7c0ae;
     --dark-tan: #7b635b;
@@ -100,9 +100,17 @@ nav img:hover {
 .inset {
     border-radius: 28px;
     border-width: 0 8px 8px 0;
-    border-color: var(--med-tan);
     border-style: solid;
+}
+
+.tan {
+    border-color: var(--med-tan);
     background-color: var(--light-tan);
+}
+
+.green {
+    border-color: var(--dark-green);
+    background-color: var(--light-green);
 }
 
 .textblock {
@@ -121,11 +129,25 @@ nav img:hover {
     padding: 8px;
     width: 32%;
     transition: 0.1s transform ease-in-out;
+    cursor: pointer;
 }
 
 .card:hover {
     transform: translate(6px, 6px);
-    background-color: var(--med-tan);
+}
+
+.tile {
+    display: inline-block;
+    padding: 8px;
+    width: 16%;
+    max-width: 130px;
+    height: 13vw;
+    max-height: 130px;
+    transition: 0.2s transform ease-in-out;
+}
+
+.tile:hover {
+    transform: rotate(90deg);
 }
 
 .boxarrow {
@@ -143,6 +165,13 @@ nav img:hover {
     object-fit: cover;
 }
 
+#minigame {
+    width: 100%;
+    height: 60px;
+    display: none;
+    /* Work In Progress */
+}
+
 @media only screen and (max-width: 1000px) {
 
     body {
@@ -155,18 +184,15 @@ nav img:hover {
         left: 0;
         top: 0;
         margin: 12px auto 24px;
-        pointer-events: none;
+    }
+
+    nav,
+    nav:hover {
+        height: 60px;
     }
 
     nav * {
         display: inline;
-    }
-
-    nav div {
-        display: inline-block;
-        padding: 6px;
-        width: 40px;
-        height: 40px;
     }
 
     nav p {
@@ -190,7 +216,9 @@ nav img:hover {
 }
 
 @media only screen and (max-width: 310px) {
-    nav {
+
+    nav,
+    nav:hover {
         height: 120px;
     }
 
