@@ -12,23 +12,27 @@
     <div class="inset tan textblock"> 
         <p class="title"> Hi, I'm Bill! </p>
     </div>
-    <div class="boxarrow"></div>
+    <div class="arrow">
+        <div class="arrowbox"></div>
+        <div class="arrowside"></div>
+    </div>
 
     <img class="headshot" alt="Profile Image" width="300" height="300"
-        src="img/headshot1.png">
+        src="img/headshot.png">
 
     <nav class="inset tan"> 
         <p> i </p>
-        <a href="http://github.com/blloop" target="_blank">
+        <a href="github.com/blloop" target="_blank">
             <img src="img/github-mark.svg" alt="GitHub Link">
         </a>
         <a href="mailto:biyu430@gmail.com" target="_blank">
             <img src="img/mail-logo.svg" alt="Email Link">
         </a>
-        <a href="http://athletic.net/athlete/12379749/track-and-field/unattached" target="_blank">
+        <a href="athletic.net/athlete/12379749/track-and-field/unattached" 
+            target="_blank">
             <img src="img/athleticnet.png" alt="Athletic.net Link">
         </a>
-        <a href="http://linkedin.com/in/biyu430" target="_blank">
+        <a href="linkedin.com/in/biyu430" target="_blank">
             <img src="img/linkedin-logo.svg" alt="LinkedIn Link">
         </a>
     </nav>
@@ -36,29 +40,33 @@
     <div class="inset tan textblock"> 
         <p class="subtitle"> Background </p>
         <p>
-            I'm a student at the University of Washington studying Computer Science
-            with a minor in Linguistics.
+            I'm a student at the University of Washington studying 
+            Computer Science with a minor in Linguistics.
         </p> 
     </div>
 
-    <canvas id="minigame" class="inset green"></canvas>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
-    <div class="inset green tile"></div>
+    <div class="pipes">
+        <div id="0" onclick="spin(0)"><img src="img/pipe.png"></div>
+        <div id="1" onclick="spin(1)"><img src="img/pipe.png"></div>
+        <div id="2" onclick="spin(2)"><img src="img/pipe.png"></div>
+        <div id="3" onclick="spin(3)"><img src="img/pipe.png"></div>
+        <div id="4" onclick="spin(4)"><img src="img/pipe.png"></div>
+        <div id="5" onclick="spin(5)"><img src="img/pipe.png"></div>
+        <div id="6" onclick="spin(6)"><img src="img/pipe.png"></div>
+        <div id="7" onclick="spin(7)"><img src="img/pipe.png"></div>
+        <div id="8" onclick="spin(8)"><img src="img/pipe.png"></div>
+        <div id="9" onclick="spin(9)"><img src="img/pipe.png"></div>
+    </div>
+
+    <script src="script.js"></script>
 
     <div class="inset tan textblock"> 
         <p class="subtitle"> Career </p>
         <p>
-            I'm an aspiring software engineer exploring different fields! 
-            I was first exposed to the field of computing through game development. 
-            My current interests are in natural language processing and web development.
+            I'm an aspiring software engineer exploring different 
+            fields! I was first exposed to the field of computing 
+            through game development. My current interests are in 
+            natural language processing and web development.
         </p>
     </div>
 
@@ -84,9 +92,10 @@
     <div class="inset tan textblock"> 
         <p class="subtitle"> Interests </p>
         <p>
-            I train recreationally for sprinting. In addition, I enjoy
-            staying active through bouldering and playing basketball. In my free time, 
-            I like reading, playing old console games, and creating nifty applications! 
+            I train recreationally for sprinting. In addition, 
+            I enjoy staying active through bouldering and playing 
+            basketball. In my free time, I like reading, playing 
+            old console games, and creating nifty applications! 
         </p>
     </div>
     
