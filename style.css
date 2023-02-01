@@ -144,7 +144,7 @@ nav img:hover {
     height: calc(0.2 * (88vw - 104px));
     max-height: 160px;
     background: transparent;
-    transition: 0.2s transform ease-in-out;
+    transition: 0.2s all ease-out;
     cursor: pointer;
 }
 
@@ -152,6 +152,21 @@ nav img:hover {
     width: 100%;
     height: 100%;
     object-fit: fill;
+}
+
+.pipes div:hover {
+    background-color: rgba(110, 110, 110, 0.5);
+}
+
+.scramble {
+    color: var(--dark-tan);
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: 0.2s background-color ease-in-out;
+}
+
+.scramble:hover {
+    background-color: var(--dark-green);
 }
 
 .arrow {
