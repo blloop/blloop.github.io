@@ -46,19 +46,40 @@
     </div>
 
     <div class="pipes">
-        <div id="0" onclick="spin(0)"><img src="img/pipe.png"></div>
-        <div id="1" onclick="spin(1)"><img src="img/pipe.png"></div>
-        <div id="2" onclick="spin(2)"><img src="img/pipe.png"></div>
-        <div id="3" onclick="spin(3)"><img src="img/pipe.png"></div>
-        <div id="4" onclick="spin(4)"><img src="img/pipe.png"></div>
-        <div id="5" onclick="spin(5)"><img src="img/pipe.png"></div>
-        <div id="6" onclick="spin(6)"><img src="img/pipe.png"></div>
-        <div id="7" onclick="spin(7)"><img src="img/pipe.png"></div>
-        <div id="8" onclick="spin(8)"><img src="img/pipe.png"></div>
-        <div id="9" onclick="spin(9)"><img src="img/pipe.png"></div>
+        <div id="0" onclick="interact(0)"><img></div>
+        <div id="1" onclick="interact(1)"><img></div>
+        <div id="2" onclick="interact(2)"><img></div>
+        <div id="3" onclick="interact(3)"><img></div>
+        <div id="4" onclick="interact(4)"><img></div>
+        <div id="5" onclick="interact(5)"><img></div>
+        <div id="6" onclick="interact(6)"><img></div>
+        <div id="7" onclick="interact(7)"><img></div>
+        <div id="8" onclick="interact(8)"><img></div>
+        <div id="9" onclick="interact(9)"><img></div>
+        <div id="10" onclick="interact(10)"><img></div>
+        <div id="11" onclick="interact(11)"><img></div>
+        <div id="12" onclick="interact(12)"><img></div>
+        <div id="13" onclick="interact(13)"><img></div>
+        <div id="14" onclick="interact(14)"><img></div>
     </div>
 
-    <button class="inset green scramble" onclick="randomize()"> Scramble </button>
+    <button 
+        class="inset red scramble" 
+        onclick="randomize()"> 
+        Scramble 
+    </button>
+    <button 
+        id="rotate" 
+        class="inset modify selected"
+        onclick="setMode('rotate')"> 
+        Rotate 
+    </button>
+    <button 
+        id="change" 
+        class="inset modify"
+        onclick="setMode('change')"> 
+        Change 
+    </button>
 
     <script src="script.js"></script>
 

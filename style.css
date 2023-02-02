@@ -1,6 +1,8 @@
 :root {
     --light-green: #aed7a8;
     --dark-green: #9cba92;
+    --light-red: #e9b0a9;
+    --dark-red: #ef8d80;
     --dark-blue: #47596b;
     --light-tan: #eee3cb;
     --med-tan: #d7c0ae;
@@ -109,6 +111,11 @@ nav img:hover {
     background-color: var(--light-green);
 }
 
+.red {
+    border-color: var(--dark-red);
+    background-color: var(--light-red);
+}
+
 .textblock {
     display: block;
     width: 100%;
@@ -166,7 +173,29 @@ nav img:hover {
 }
 
 .scramble:hover {
-    background-color: var(--dark-green);
+    background-color: var(--dark-red);
+}
+
+.modify {
+    color: var(--dark-tan);
+    background-color: var(--light-tan);
+    border-color: var(--med-tan);
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: 0.2s all ease-in-out;
+}
+
+.modify:hover {
+    background-color: var(--med-tan);
+}
+
+.modify.selected {
+    background-color: var(--light-green);
+    border-color: var(--dark-green);
+}
+
+.modify.selected:hover {
+    cursor: default;
 }
 
 .arrow {
