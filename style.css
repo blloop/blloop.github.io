@@ -1,10 +1,9 @@
 :root {
-    --light-green: #aed7a8;
-    --dark-green: #9cba92;
+    --light-green: #cee5d0;
+    --dark-green: #94b49f;
     --light-red: #e9b0a9;
     --dark-red: #ef8d80;
-    --dark-blue: #47596b;
-    --light-tan: #eee3cb;
+    --light-tan: #ecb390;
     --med-tan: #d7c0ae;
     --dark-tan: #7b635b;
 }
@@ -23,9 +22,7 @@
 }
 
 html {
-    background-color: var(--dark-blue);
-    background-image: url(img/wave2.png);
-    background-repeat: repeat;
+    background-color: var(--light-green);
 }
 
 body {
@@ -35,9 +32,8 @@ body {
     padding: 48px;
     text-align: center;
     color: var(--dark-tan);
-    border-radius: 28px;
-    background-image: url(img/wave.png);
-    background-repeat: repeat;
+    /* border-radius: 28px; */
+    background-color: var(--dark-green);
 }
 
 body>*:nth-child(n+4) {
@@ -49,14 +45,10 @@ nav {
     left: 40px;
     top: 30vh;
     width: 60px;
-    height: 60px;
+    height: 250px;
     padding: 6px;
     overflow: hidden;
     transition: 0.2s height ease-in-out;
-}
-
-nav:hover {
-    height: 250px;
 }
 
 nav p {
@@ -71,7 +63,7 @@ nav a {
 nav a img {
     height: 40px;
     width: 40px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     cursor: pointer;
     transition: 0.2s background-color ease-in-out;
 }
@@ -96,7 +88,7 @@ nav img:hover {
 }
 
 .inset {
-    border-radius: 28px;
+    /* border-radius: 28px; */
     border-width: 0 8px 8px 0;
     border-style: solid;
 }
@@ -219,7 +211,7 @@ nav img:hover {
 }
 
 .headshot {
-    border-radius: 32px;
+    /* border-radius: 32px; */
     max-width: 100%;
     object-fit: cover;
 }
@@ -238,9 +230,8 @@ nav img:hover {
         margin: 12px auto 24px;
     }
 
-    nav,
-    nav:hover {
-        height: 60px;
+    nav {
+        height: auto;
     }
 
     nav * {
@@ -273,11 +264,6 @@ nav img:hover {
 }
 
 @media only screen and (max-width: 310px) {
-
-    nav,
-    nav:hover {
-        height: 120px;
-    }
 
     .headshot {
         height: 200px;
