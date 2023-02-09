@@ -1,16 +1,15 @@
 :root {
-    --light-green: #cee5d0;
-    --dark-green: #94b49f;
-    --light-red: #e9b0a9;
-    --dark-red: #ef8d80;
-    --light-tan: #ecb390;
-    --med-tan: #d7c0ae;
-    --dark-tan: #7b635b;
+    --dark-green: #94B49F;
+    --light-green: #CEE5D0;
+    --beige: #ede1ac;
+    --white: #FCF8E8;
+    --orange: #ECB390;
+    --brown: #6f4b34;
 }
 
 @font-face {
-    font-family: 'Telegrama';
-    src: url('fonts/telegrama-render.otf') format('otf');
+    font-family: Telegrama;
+    src: url(fonts/telegrama-render.otf);
 }
 
 * {
@@ -18,267 +17,113 @@
     margin: 0;
     padding: 0;
     font-size: 24px;
-    font-family: 'Telegrama', monospace;
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    font-size: 36px;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.nav img {
+    width: 72px;
+    padding: 4px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: 40%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a img {
+    width: 60px;
+    padding: 4px 8px;
+}
+
+a:hover {
+    background-color: var(--orange);
+}
+
+.void {
+    pointer-events: none;
+}
+
+.block {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tall {
+    height: 800px;
+}
+
+.short {
+    height: 300px;
+}
+
+.footer {
+    height: 60px;
+}
+
+.content {
+    width: 900px;
+    max-width: 80vw;
+    text-align: center;
+}
+
+.content img {
+    width: 320px;
+    max-width: 80vw;
+    border-radius: 50%;
+}
+
+.content * {
+    display: inline-block;
+}
+
+.main-text {
+    font-size: 48px;
+}
+
+.fade-green {
+    background-image: linear-gradient(to bottom, var(--dark-green), var(--light-green));
+}
+
+.light-green {
     background-color: var(--light-green);
 }
 
-body {
-    width: 900px;
-    max-width: 88vw;
-    margin: 0 auto;
-    padding: 48px;
-    text-align: center;
-    color: var(--dark-tan);
-    /* border-radius: 28px; */
+.dark-green {
     background-color: var(--dark-green);
 }
 
-body>*:nth-child(n+4) {
-    margin-top: 24px;
+.white {
+    background-color: var(--white);
 }
 
-nav {
-    position: fixed;
-    left: 40px;
-    top: 30vh;
-    width: 60px;
-    height: 250px;
-    padding: 6px;
-    overflow: hidden;
-    transition: 0.2s height ease-in-out;
+.beige {
+    background-color: var(--beige);
 }
 
-nav p {
-    padding: 8px;
-    margin-bottom: 4px;
+.orange {
+    background-color: var(--orange);
 }
 
-nav a {
-    display: inline-block;
-}
-
-nav a img {
-    height: 40px;
-    width: 40px;
-    /* border-radius: 50%; */
-    cursor: pointer;
-    transition: 0.2s background-color ease-in-out;
-}
-
-nav img:hover {
-    background-color: var(--med-tan);
-}
-
-.title {
-    font-size: 32px;
-}
-
-.subtitle {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-
-.description {
-    font-size: 18px;
-    margin-top: 8px;
-}
-
-.inset {
-    /* border-radius: 28px; */
-    border-width: 0 8px 8px 0;
-    border-style: solid;
-}
-
-.tan {
-    border-color: var(--med-tan);
-    background-color: var(--light-tan);
-}
-
-.green {
-    border-color: var(--dark-green);
-    background-color: var(--light-green);
-}
-
-.red {
-    border-color: var(--dark-red);
-    background-color: var(--light-red);
-}
-
-.textblock {
-    display: block;
-    width: 100%;
-    padding: 24px 40px;
-}
-
-.narrow {
-    display: block;
-    padding: 12px 0 8px;
-}
-
-.card {
-    display: inline-block;
-    padding: 8px;
-    width: 32%;
-    transition: 0.1s transform ease-in-out;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translate(6px, 6px);
-}
-
-.pipes {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.pipes div {
-    display: inline-block;
-    width: calc(0.2 * (88vw - 104px));
-    max-width: 160px;
-    height: calc(0.2 * (88vw - 104px));
-    max-height: 160px;
-    background: transparent;
-    transition: 0.2s all ease-out;
-    cursor: pointer;
-}
-
-.pipes div img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-
-.pipes div:hover {
-    background-color: rgba(110, 110, 110, 0.5);
-}
-
-.scramble {
-    color: var(--dark-tan);
-    cursor: pointer;
-    padding: 6px 12px;
-    transition: 0.2s background-color ease-in-out;
-}
-
-.scramble:hover {
-    background-color: var(--dark-red);
-}
-
-.modify {
-    color: var(--dark-tan);
-    background-color: var(--light-tan);
-    border-color: var(--med-tan);
-    cursor: pointer;
-    padding: 6px 12px;
-    transition: 0.2s all ease-in-out;
-}
-
-.modify:hover {
-    background-color: var(--med-tan);
-}
-
-.modify.selected {
-    background-color: var(--light-green);
-    border-color: var(--dark-green);
-}
-
-.modify.selected:hover {
-    cursor: default;
-}
-
-.arrow {
-    margin: -8px auto 0;
-}
-
-.arrowbox {
-    display: inline-block;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 30px solid var(--light-tan);
-}
-
-.arrowside {
-    display: inline-block;
-    height: 30px;
-    width: 12px;
-    margin-left: -30px;
-    transform: skewX(-45deg);
-    background-color: var(--med-tan);
-}
-
-.headshot {
-    /* border-radius: 32px; */
-    max-width: 100%;
-    object-fit: cover;
-}
-
-@media only screen and (max-width: 1000px) {
-
-    body {
-        padding: 24px;
-    }
-
-    nav {
-        position: relative;
-        width: 100%;
-        left: 0;
-        top: 0;
-        margin: 12px auto 24px;
-    }
-
-    nav {
-        height: auto;
-    }
-
-    nav * {
-        display: inline;
-    }
-
-    nav p {
-        display: none;
-    }
-
-    .textblock {
-        padding: 12px 18px;
-    }
-
-    .tile {
-        width: calc(0.2 * (88vw - 56px));
-        height: calc(0.2 * (88vw - 56px));
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    p {
-        font-size: 18px;
-    }
-
-    .title,
-    .subtitle {
-        font-size: 24px;
-    }
-}
-
-@media only screen and (max-width: 310px) {
-
-    .headshot {
-        height: 200px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .title,
-    .subtitle {
-        font-size: 18px;
-    }
-
-    .textblock {
-        padding: 8px;
-    }
+.text-brown {
+    color: var(--brown);
 }

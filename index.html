@@ -4,123 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="img/site-logo.png">
-    <title> Hi, I'm Bill </title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
+    <title> Bill Yu </title>
 </head>
 <body>
-    <div class="inset tan textblock"> 
-        <p class="title"> Hi, I'm Bill! </p>
+    <div class="nav dark-green">
+        <!-- <a class="link void"> Bill </a> -->
+        <img src="img/logo.png" alt="Site Logo">
+        <!-- <a class="void"> Bill Yu </a> -->
+        <div>
+            <a class="link" data-scroll="#about"> About </a>
+            <a class="link" data-scroll="#projects"> Projects </a>
+            <a class="link" data-scroll="#contact"> Contact </a>
+        </div>
     </div>
-    <div class="arrow">
-        <div class="arrowbox"></div>
-        <div class="arrowside"></div>
-    </div>
-
-    <img class="headshot" alt="Profile Image" width="300" height="300"
-        src="img/headshot.png">
-
-    <nav class="inset tan"> 
-        <p> i </p>
-        <a href="github.com/blloop" target="_blank">
+    <div class="sidebar white">
+        <a href="http://github.com/blloop" target="_blank">
             <img src="img/github-mark.svg" alt="GitHub Link">
         </a>
         <a href="mailto:biyu430@gmail.com" target="_blank">
             <img src="img/mail-logo.svg" alt="Email Link">
         </a>
-        <a href="athletic.net/athlete/12379749/track-and-field/unattached" 
+        <a href="http://athletic.net/athlete/12379749/track-and-field/unattached" 
             target="_blank">
             <img src="img/athleticnet.png" alt="Athletic.net Link">
         </a>
-        <a href="linkedin.com/in/biyu430" target="_blank">
+        <a href="http://linkedin.com/in/biyu430" target="_blank">
             <img src="img/linkedin-logo.svg" alt="LinkedIn Link">
         </a>
-    </nav>
-
-    <div class="inset tan textblock"> 
-        <p class="subtitle"> Background </p>
-        <p>
-            I'm a student at the University of Washington studying 
-            Computer Science with a minor in Linguistics.
-        </p> 
     </div>
-
-    <div class="pipes">
-        <div id="0" onclick="interact(0)"><img></div>
-        <div id="1" onclick="interact(1)"><img></div>
-        <div id="2" onclick="interact(2)"><img></div>
-        <div id="3" onclick="interact(3)"><img></div>
-        <div id="4" onclick="interact(4)"><img></div>
-        <div id="5" onclick="interact(5)"><img></div>
-        <div id="6" onclick="interact(6)"><img></div>
-        <div id="7" onclick="interact(7)"><img></div>
-        <div id="8" onclick="interact(8)"><img></div>
-        <div id="9" onclick="interact(9)"><img></div>
-        <div id="10" onclick="interact(10)"><img></div>
-        <div id="11" onclick="interact(11)"><img></div>
-        <div id="12" onclick="interact(12)"><img></div>
-        <div id="13" onclick="interact(13)"><img></div>
-        <div id="14" onclick="interact(14)"><img></div>
+    <div class="block tall fade-green">
+        <div class="content">
+            <img src="img/headshot.png" alt="Photo of Me!">
+            <p class="main-text"> Hello there! <br> My name is Bill </p>
+        </div>
     </div>
-
-    <button 
-        class="inset red scramble" 
-        onclick="randomize()"> 
-        Scramble 
-    </button>
-    <button 
-        id="rotate" 
-        class="inset modify selected"
-        onclick="setMode('rotate')"> 
-        Rotate 
-    </button>
-    <button 
-        id="change" 
-        class="inset modify"
-        onclick="setMode('change')"> 
-        Change 
-    </button>
-
-    <script src="script.js"></script>
-
-    <div class="inset tan textblock"> 
-        <p class="subtitle"> Career </p>
-        <p>
-            I'm an aspiring software engineer exploring different 
-            fields! I was first exposed to the field of computing 
-            through game development. My current interests are in 
-            natural language processing and web development.
-        </p>
+    <div class="block short beige" id="about">
+        <div class="content text-brown">
+            About Me
+        </div>
     </div>
-
-    <div class="inset tan narrow"> 
-        <p class="subtitle"> Projects </p>
+    <div class="block short dark-green" id="projects">
+        <div class="content">
+            Projects
+        </div>
     </div>
-
-    <div class="inset green card">
-        <p> Project 1 </p>
-        <p class="description"> Description </p>
+    <div class="block short light-green" id="contact">
+        <div class="content text-brown">
+            Contact
+        </div>
     </div>
-
-    <div class="inset green card">
-        <p> Project 2 </p>
-        <p class="description"> Description </p>
+    <div class="block footer orange">
+        <div class="content text-brown">
+            Copyright &copy; 2023 Bill Yu
+        </div>
     </div>
-
-    <div class="inset green card">
-        <p> Project 3 </p>
-        <p class="description"> Description </p>
-    </div>
-
-    <div class="inset tan textblock"> 
-        <p class="subtitle"> Interests </p>
-        <p>
-            I train recreationally for sprinting. In addition, 
-            I enjoy staying active through bouldering and playing 
-            basketball. In my free time, I like reading, playing 
-            old console games, and creating nifty applications! 
-        </p>
-    </div>
-    
 </body>
 </html>
