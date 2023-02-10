@@ -1,3 +1,5 @@
+/* Base Styling */
+
 :root {
     --dark-green: #94B49F;
     --light-green: #CEE5D0;
@@ -18,8 +20,11 @@
     padding: 0;
     font-size: 24px;
     color: var(--white);
+    scrollbar-width: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Component Styling */
 
 .nav {
     display: flex;
@@ -28,7 +33,7 @@
 }
 
 .nav a {
-    font-size: 36px;
+    font-size: 30px;
     padding: 18px;
     cursor: pointer;
 }
@@ -43,40 +48,40 @@
     left: 10px;
     top: 40%;
     width: 60px;
+    height: 240px;
+    z-index: 5;
     display: flex;
     flex-direction: column;
 }
 
-.sidebar a img {
+.sidebar a {
     width: 60px;
-    padding: 4px 8px;
+    height: 60px;
+}
+
+.sidebar img {
+    width: 60px;
+    padding: 8px 8px;
 }
 
 a:hover {
     background-color: var(--orange);
 }
 
-.void {
-    pointer-events: none;
-}
-
 .block {
     width: 100%;
-    height: 400px;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 
-.tall {
-    height: 800px;
+.block.header {
+    height: calc(100vh - 72px);
 }
 
-.short {
-    height: 300px;
-}
-
-.footer {
+.block.footer {
     height: 60px;
 }
 
@@ -96,8 +101,55 @@ a:hover {
     display: inline-block;
 }
 
-.main-text {
+.arrow {
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.arrow img {
+    width: 100%;
+    height: 100px;
+    padding: 20px 0;
+    transition: 0.2s background-color ease-in-out;
+}
+
+.up img:hover {
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.5), 
+        rgba(255, 255, 255, 0)
+    );
+}
+
+.down img:hover {
+    background-image: linear-gradient(
+        to top, 
+        rgba(255, 255, 255, 0.5), 
+        rgba(255, 255, 255, 0)
+    );
+}
+
+.down {
+    top: -100px;
+}
+
+/* Group Styling */
+
+.text-large {
     font-size: 48px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-brown {
+    color: var(--brown);
 }
 
 .fade-green {
@@ -124,6 +176,8 @@ a:hover {
     background-color: var(--orange);
 }
 
-.text-brown {
-    color: var(--brown);
+/* Responsive Styling */
+
+@media only screen and (max-width: 1000px) {
+
 }

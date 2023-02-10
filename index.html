@@ -10,14 +10,12 @@
     <title> Bill Yu </title>
 </head>
 <body>
-    <div class="nav dark-green">
-        <!-- <a class="link void"> Bill </a> -->
+    <div class="nav dark-green" id="main">
         <img src="img/logo.png" alt="Site Logo">
-        <!-- <a class="void"> Bill Yu </a> -->
         <div>
-            <a class="link" data-scroll="#about"> About </a>
-            <a class="link" data-scroll="#projects"> Projects </a>
-            <a class="link" data-scroll="#contact"> Contact </a>
+            <a class="link" data-scroll="#about"> About</a>
+            <a class="link" data-scroll="#projects"> Projects</a>
+            <a class="link" data-scroll="#contact"> Contact</a>
         </div>
     </div>
     <div class="sidebar white">
@@ -35,23 +33,29 @@
             <img src="img/linkedin-logo.svg" alt="LinkedIn Link">
         </a>
     </div>
-    <div class="block tall fade-green">
+    <div class="block header fade-green">
         <div class="content">
             <img src="img/headshot.png" alt="Photo of Me!">
-            <p class="main-text"> Hello there! <br> My name is Bill </p>
+            <p class="text-left text-large"> Hello there! <br> My name is Bill </p>
         </div>
     </div>
-    <div class="block short beige" id="about">
+    <a class="arrow down" data-scroll="#about"><img src="img/down-arrow.svg"></a>
+    <a class="arrow up" data-scroll="#main"><img src="img/up-arrow.svg"></a>
+    <div class="block beige" id="about">
         <div class="content text-brown">
             About Me
         </div>
     </div>
-    <div class="block short dark-green" id="projects">
+    <a class="arrow down" data-scroll="#projects"><img src="img/down-arrow.svg"></a>
+    <a class="arrow up" data-scroll="#about"><img src="img/up-arrow.svg"></a>
+    <div class="block dark-green" id="projects">
         <div class="content">
             Projects
         </div>
     </div>
-    <div class="block short light-green" id="contact">
+    <a class="arrow down" data-scroll="#contact"><img src="img/down-arrow.svg"></a>
+    <a class="arrow up" data-scroll="#projects"><img src="img/up-arrow.svg"></a>
+    <div class="block light-green" id="contact">
         <div class="content text-brown">
             Contact
         </div>
