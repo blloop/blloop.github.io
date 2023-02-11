@@ -9,23 +9,21 @@
     --brown: #6f4b34;
 }
 
-@font-face {
-    font-family: Telegrama;
-    src: url(fonts/telegrama-render.otf);
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 24px;
-    color: var(--white);
-    scrollbar-width: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
     z-index: 3;
+}
+
+p,
+a {
+    color: var(--white);
 }
 
 a:hover {
@@ -89,7 +87,7 @@ a:hover {
     height: calc(100vh - 72px);
 }
 
-.header .content {
+.content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,19 +128,15 @@ a:hover {
 }
 
 .up img:hover {
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(255, 255, 255, 0.5), 
-        rgba(255, 255, 255, 0)
-    );
+    background-image: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0));
 }
 
 .down img:hover {
-    background-image: linear-gradient(
-        to top, 
-        rgba(255, 255, 255, 0.5), 
-        rgba(255, 255, 255, 0)
-    );
+    background-image: linear-gradient(to top,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0));
 }
 
 .down {
@@ -156,12 +150,13 @@ a:hover {
 }
 
 .card-inner {
-    position: absolute;
+    position: relative;
     width: 300px;
     height: 200px;
     z-index: 2;
     border-style: solid;
     border-color: var(--orange);
+    border-radius: 12px;
 
 }
 
@@ -185,7 +180,9 @@ a:hover {
     text-align: left;
 }
 
-.text-column {
+.text-block {
+    width: 700px;
+    max-width: 70vw;
     display: flex;
     flex-direction: column;
 }
@@ -222,4 +219,11 @@ a:hover {
 
 @media only screen and (max-width: 1000px) {
 
+    .text-large {
+        font-size: 40px;
+    }
+
+    .text-medium {
+        font-size: 24px;
+    }
 }
