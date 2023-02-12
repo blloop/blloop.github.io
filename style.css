@@ -19,11 +19,12 @@
 
 p {
     z-index: 3;
+    color: var(--white);
 }
 
-p,
 a {
     color: var(--white);
+    transition: 0.1s all ease-in-out;
 }
 
 a:hover {
@@ -100,14 +101,20 @@ a:hover {
     text-align: center;
 }
 
-.content img {
+.content>img {
     width: 320px;
     max-width: 50vw;
     border-radius: 50%;
 }
 
-.content * {
-    display: inline-block;
+.collage>img {
+    width: 220px;
+    max-width: 25vw;
+    border-radius: 50%;
+}
+
+.collage img:nth-child(n+3) {
+    margin-top: -32px;
 }
 
 .arrow {
@@ -166,6 +173,13 @@ a:hover {
     border-width: 12px 0 0 12px;
 }
 
+.cv-link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 8px;
+}
+
 /* Group Styling */
 
 .text-large {
@@ -174,6 +188,10 @@ a:hover {
 
 .text-medium {
     font-size: 36px;
+}
+
+.text-space {
+    height: 12px;
 }
 
 .text-left {
