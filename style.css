@@ -31,6 +31,15 @@ a:hover {
     background-color: var(--orange);
 }
 
+hr {
+    background-color: var(--white);
+    width: 30%;
+    height: 4px;
+    margin: 16px 0 12px;
+    border: none;
+    border-radius: 4px;
+}
+
 /* Component Styling */
 
 .nav {
@@ -89,16 +98,11 @@ a:hover {
 }
 
 .content {
+    width: 1200px;
+    max-width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 120px;
-}
-
-.content {
-    width: 1200px;
-    max-width: 80vw;
-    text-align: center;
 }
 
 .content>img {
@@ -107,14 +111,22 @@ a:hover {
     border-radius: 50%;
 }
 
+.collage {
+    width: 365px;
+    max-width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .collage>img {
-    width: 220px;
+    width: 180px;
     max-width: 25vw;
     border-radius: 50%;
 }
 
 .collage img:nth-child(n+3) {
-    margin-top: -32px;
+    margin-top: -24px;
 }
 
 .arrow {
@@ -173,10 +185,10 @@ a:hover {
     border-width: 12px 0 0 12px;
 }
 
-.cv-link {
+.inline-link {
     text-decoration: none;
     font-weight: bold;
-    padding: 0 4px;
+    padding: 0 8px;
     border-radius: 8px;
 }
 
@@ -207,6 +219,10 @@ a:hover {
 
 .text-brown {
     color: var(--brown);
+}
+
+.hr-brown {
+    background-color: var(--brown);
 }
 
 .fade-green {
