@@ -89,6 +89,15 @@ hr {
     align-items: center;
 }
 
+.first-block {
+    padding: 12px;
+    border-radius: 0 24px;
+    background-image: linear-gradient(to bottom,
+        rgba(148, 180, 159, 1),
+        rgba(148, 180, 159, 0)
+    );
+}
+
 .footer {
     height: 60px;
 }
@@ -98,7 +107,7 @@ hr {
 }
 
 .content {
-    width: 1200px;
+    width: 1100px;
     max-width: 80vw;
     display: flex;
     justify-content: space-between;
@@ -147,15 +156,19 @@ hr {
 }
 
 .up img:hover {
-    background-image: linear-gradient(to bottom,
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0));
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0)
+    );
 }
 
 .down img:hover {
-    background-image: linear-gradient(to top,
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0));
+    background-image: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0)
+    );
 }
 
 .down {
@@ -226,7 +239,11 @@ hr {
 }
 
 .fade-green {
-    background-image: linear-gradient(to bottom, var(--dark-green), var(--light-green));
+    background-image: linear-gradient(
+        to bottom, 
+        var(--dark-green), 
+        var(--light-green)
+    );
 }
 
 .light-green {
@@ -251,13 +268,33 @@ hr {
 
 /* Responsive Styling */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1350px) {
+
+    .content {
+        width: 900px;
+    }
+
+    .content>img {
+        width: 240px;
+    }
+
+    .collage>img {
+        width: 135px;
+    }
+
+    .text-block {
+        width: 600px;
+    }
 
     .text-large {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     .text-medium {
-        font-size: 24px;
+        font-size: 27px;
+    }
+
+    .text-small {
+        font-size: 18px;
     }
 }
