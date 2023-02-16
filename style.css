@@ -70,7 +70,6 @@ hr {
 }
 
 .sidebar a {
-    width: 60px;
     height: 60px;
 }
 
@@ -107,6 +106,8 @@ hr {
 .content {
     width: 1100px;
     max-width: 80vw;
+    max-height: 90vh;
+    /* overflow-y: auto; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -263,7 +264,7 @@ hr {
 @media only screen and (max-width: 1350px) {
 
     .content {
-        width: 900px;
+        width: 900px
     }
 
     .text-block {
@@ -306,7 +307,7 @@ hr {
     }
 
     hr {
-        width: 200px;
+        width: 180px;
     }
 
 }
@@ -316,7 +317,6 @@ hr {
     .content {
         flex-direction: column;
         gap: 48px;
-        max-width: 84vw;
     }
 
     .reverse {
@@ -327,8 +327,14 @@ hr {
         height: calc(100vh - 132px);
     }
 
+    .content {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
     .text-block {
-        max-width: 84vw;
+        max-width: 70vw;
     }
 
     .sidebar {
@@ -340,6 +346,15 @@ hr {
         background-color: var(--dark-green);
     }
 
+    .arrow img {
+        height: 70px;
+        padding: 12px;
+
+    }
+
+    .down {
+        top: -70px;
+    }
 
     .first-block {
         border-radius: 0;
@@ -363,4 +378,71 @@ hr {
         border-width: 12px 0 0;
     }
 
+    hr {
+        margin: 12px auto;
+    }
+
+    .text-large,
+    .text-medium {
+        text-align: center;
+    }
+
+    .text-block:not(.first-block) .text-small {
+        text-align: justify;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .nav {
+        align-items: normal;
+    }
+
+    .nav a {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .nav img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header {
+        height: calc(100vh - 80px);
+    }
+
+    .sidebar {
+        height: 40px;
+    }
+
+    .sidebar a {
+        height: 40px;
+    }
+
+    .sidebar img {
+        width: 40px;
+        padding: 8px 8px;
+    }
+
+    .text-large {
+        font-size: 24px;
+    }
+
+    .text-medium {
+        font-size: 18px;
+    }
+
+    .text-small {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+
+    .nav a {
+        /* padding: 0; */
+        font-size: 12px;
+    }
 }
