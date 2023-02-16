@@ -49,7 +49,6 @@ hr {
 }
 
 .nav a {
-    font-size: 30px;
     padding: 18px;
     cursor: pointer;
 }
@@ -93,9 +92,8 @@ hr {
     padding: 12px;
     border-radius: 0 24px;
     background-image: linear-gradient(to bottom,
-        rgba(148, 180, 159, 1),
-        rgba(148, 180, 159, 0)
-    );
+            rgba(148, 180, 159, 1),
+            rgba(148, 180, 159, 0));
 }
 
 .footer {
@@ -156,19 +154,15 @@ hr {
 }
 
 .up img:hover {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0)
-    );
+    background-image: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0));
 }
 
 .down img:hover {
-    background-image: linear-gradient(
-        to top,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0)
-    );
+    background-image: linear-gradient(to top,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0));
 }
 
 .down {
@@ -239,11 +233,9 @@ hr {
 }
 
 .fade-green {
-    background-image: linear-gradient(
-        to bottom, 
-        var(--dark-green), 
-        var(--light-green)
-    );
+    background-image: linear-gradient(to bottom,
+            var(--dark-green),
+            var(--light-green));
 }
 
 .light-green {
@@ -274,6 +266,10 @@ hr {
         width: 900px;
     }
 
+    .text-block {
+        width: 600px;
+    }
+
     .content>img {
         width: 240px;
     }
@@ -282,8 +278,8 @@ hr {
         width: 135px;
     }
 
-    .text-block {
-        width: 600px;
+    .collage img:nth-child(n+3) {
+        margin-top: -18px;
     }
 
     .text-large {
@@ -297,4 +293,74 @@ hr {
     .text-small {
         font-size: 18px;
     }
+
+    .footer {
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+
+    .text-block {
+        max-width: 50vw;
+    }
+
+    hr {
+        width: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .content {
+        flex-direction: column;
+        gap: 48px;
+        max-width: 84vw;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .header {
+        height: calc(100vh - 132px);
+    }
+
+    .text-block {
+        max-width: 84vw;
+    }
+
+    .sidebar {
+        position: initial;
+        height: 60px;
+        width: calc(100vw - 30px);
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: var(--dark-green);
+    }
+
+
+    .first-block {
+        border-radius: 0;
+    }
+
+    .first-block .card {
+        width: calc(100% + 24px);
+    }
+
+    .first-block .card .tl {
+        left: -12px;
+    }
+
+    .card,
+    .card-inner {
+        width: 100%;
+    }
+
+    .tl {
+        left: 0;
+        border-width: 12px 0 0;
+    }
+
 }

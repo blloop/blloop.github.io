@@ -9,13 +9,13 @@
     <script defer src="script.js"></script>
     <title> Bill Yu </title>
 </head>
-<body>
-    <div class="nav dark-green" id="main">
+<body class="dark-green">
+    <div class="nav dark-green">
         <img src="img/logo.png" alt="Site Logo">
         <div>
-            <a class="link" data-scroll="#about"> About</a>
-            <a class="link" data-scroll="#projects"> Projects</a>
-            <a class="link" data-scroll="#contact"> Contact</a>
+            <a class="link text-medium" data-scroll="#about"> About</a>
+            <a class="link text-medium" data-scroll="#projects"> Projects</a>
+            <a class="link text-medium" data-scroll="#contact"> Contact</a>
         </div>
     </div>
     <div class="sidebar white">
@@ -33,7 +33,7 @@
             <img src="img/linkedin-logo.svg" alt="LinkedIn Link">
         </a>
     </div>
-    <div class="block header fade-green">
+    <div class="block header fade-green" id="main">
         <div class="content">
             <img src="img/headshot.png" alt="A photo of myself">
             <div class="text-left text-block first-block">
@@ -52,7 +52,7 @@
     <a class="arrow down" data-scroll="#about"><img src="img/down-arrow.svg"></a>
     <a class="arrow up" data-scroll="#main"><img src="img/up-arrow.svg"></a>
     <div class="block beige" id="about">
-        <div class="content">
+        <div class="content reverse">
             <div class="text-left text-block">
                 <div class="card">
                     <div class="card-inner tl"></div>
@@ -105,7 +105,7 @@
                     <p class="text-small"> 
                         My most recent project is a 
                         calendar<a href="http://bill-yu.dev/weeklies" target="_blank"
-                        class="inline-link">web app</a>that focuses on weekly time 
+                        class="inline-link text-small">web app</a>that focuses on weekly time 
                         commitments rather than a continuous schedule. <br>
                         I found that typical calendar apps
                         don't have good support for weekly events. While some
@@ -117,7 +117,7 @@
     <a class="arrow down" data-scroll="#contact"><img src="img/down-arrow.svg"></a>
     <a class="arrow up" data-scroll="#projects"><img src="img/up-arrow.svg"></a>
     <div class="block light-green" id="contact">
-        <div class="content text-brown">
+        <div class="content text-brown reverse">
             <div class="text-left text-block">
                 <div class="card">
                     <div class="card-inner tl"></div>
@@ -135,7 +135,7 @@
                 <p class="text-space"></p>
                 <p class="text-small text-brown"> 
                     Click<a href="resume.pdf" target="_blank"
-                    class="text-brown inline-link">here</a>to 
+                    class="text-brown text-small inline-link">here</a>to 
                     view my resume
                 </p>
             </div>
