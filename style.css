@@ -114,27 +114,30 @@ hr {
 }
 
 .content>img {
-    width: 320px;
-    max-width: 50vw;
+    width: 25%;
     border-radius: 50%;
 }
 
 .collage {
-    width: 365px;
-    max-width: 50vw;
+    width: 25%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .collage>img {
-    width: 180px;
-    max-width: 25vw;
+    width: 50%;
     border-radius: 50%;
 }
 
 .collage img:nth-child(n+3) {
-    margin-top: -24px;
+    margin-top: -18px;
+}
+
+.text-block {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .arrow {
@@ -218,13 +221,6 @@ hr {
     text-align: left;
 }
 
-.text-block {
-    width: 700px;
-    max-width: 70vw;
-    display: flex;
-    flex-direction: column;
-}
-
 .text-brown {
     color: var(--brown);
 }
@@ -263,22 +259,6 @@ hr {
 
 @media only screen and (max-width: 1350px) {
 
-    .content {
-        width: 900px
-    }
-
-    .text-block {
-        width: 600px;
-    }
-
-    .content>img {
-        width: 240px;
-    }
-
-    .collage>img {
-        width: 135px;
-    }
-
     .collage img:nth-child(n+3) {
         margin-top: -18px;
     }
@@ -302,10 +282,6 @@ hr {
 
 @media only screen and (max-width: 1130px) {
 
-    .text-block {
-        max-width: 50vw;
-    }
-
     hr {
         width: 180px;
     }
@@ -319,22 +295,24 @@ hr {
         gap: 48px;
     }
 
+    .content>img {
+        width: 35vw;
+    }
+
+    .collage {
+        width: 35vw;
+    }
+
+    .text-block {
+        width: 85vw;
+    }
+
     .reverse {
         flex-direction: column-reverse;
     }
 
     .header {
         height: calc(100vh - 132px);
-    }
-
-    .content {
-        overflow-y: auto;
-        overflow-x: hidden;
-        max-width: 100vw;
-    }
-
-    .text-block {
-        max-width: 70vw;
     }
 
     .sidebar {
@@ -349,7 +327,6 @@ hr {
     .arrow img {
         height: 70px;
         padding: 12px;
-
     }
 
     .down {
@@ -394,6 +371,10 @@ hr {
 }
 
 @media only screen and (max-width: 500px) {
+
+    .text-block {
+        width: 70vw;
+    }
 
     .nav {
         align-items: normal;
@@ -442,7 +423,7 @@ hr {
 @media only screen and (max-width: 330px) {
 
     .nav a {
-        /* padding: 0; */
+        padding: 4px;
         font-size: 12px;
     }
 }
