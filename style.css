@@ -2,6 +2,7 @@
 
 :root {
     --dark-green: #94B49F;
+    --dark-green-2: #9AB9AF;
     --light-green: #CEE5D0;
     --beige: #ede1ac;
     --white: #FCF8E8;
@@ -13,7 +14,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -34,6 +34,7 @@ a:hover {
 hr {
     background-color: var(--white);
     width: 30%;
+    max-width: 50vw;
     height: 4px;
     margin: 16px 0 12px;
     border: none;
@@ -42,20 +43,25 @@ hr {
 
 /* Component Styling */
 
+.header {
+    width: 100%;
+}
+
 .nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav a {
-    padding: 18px;
+    padding: 14px;
     cursor: pointer;
 }
 
 .nav img {
-    width: 72px;
-    padding: 4px;
+    width: 80px;
+    padding: 0px 8px;
 }
 
 .sidebar {
@@ -83,7 +89,7 @@ hr {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -97,17 +103,12 @@ hr {
 
 .footer {
     height: 60px;
-}
-
-.header {
-    height: calc(100vh - 72px);
+    justify-content: center;
 }
 
 .content {
-    width: 1100px;
-    max-width: 80vw;
-    max-height: 90vh;
-    /* overflow-y: auto; */
+    width: 80%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,12 +142,11 @@ hr {
 }
 
 .arrow {
+    width: 100%;
+    height: 0;
     position: relative;
     display: block;
     text-align: center;
-    height: 0;
-    left: 0;
-    right: 0;
     cursor: pointer;
 }
 
@@ -213,6 +213,10 @@ hr {
     font-size: 36px;
 }
 
+.text-small {
+    font-size: 24px;
+}
+
 .text-space {
     height: 12px;
 }
@@ -260,7 +264,7 @@ hr {
 @media only screen and (max-width: 1350px) {
 
     .collage img:nth-child(n+3) {
-        margin-top: -18px;
+        margin-top: -7%;
     }
 
     .text-large {
@@ -280,19 +284,13 @@ hr {
     }
 }
 
-@media only screen and (max-width: 1130px) {
-
-    hr {
-        width: 180px;
-    }
-
-}
-
 @media only screen and (max-width: 900px) {
 
     .content {
         flex-direction: column;
+        justify-content: space-around;
         gap: 48px;
+        overflow: auto;
     }
 
     .content>img {
@@ -303,16 +301,16 @@ hr {
         width: 35vw;
     }
 
-    .text-block {
-        width: 85vw;
+    .text-block:not(.first-block) {
+        width: 100%;
+    }
+
+    .first-block {
+        width: 90%;
     }
 
     .reverse {
         flex-direction: column-reverse;
-    }
-
-    .header {
-        height: calc(100vh - 132px);
     }
 
     .sidebar {
@@ -321,11 +319,12 @@ hr {
         width: calc(100vw - 30px);
         flex-direction: row;
         justify-content: flex-end;
-        background-color: var(--dark-green);
+        background-color: transparent;
     }
 
     .arrow img {
         height: 70px;
+        max-height: 20vh;
         padding: 12px;
     }
 
@@ -386,8 +385,8 @@ hr {
     }
 
     .nav img {
+        object-fit: cover;
         width: 40px;
-        height: 40px;
     }
 
     .header {
