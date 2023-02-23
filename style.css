@@ -27,7 +27,7 @@ a {
     transition: 0.1s all ease-in-out;
 }
 
-a:hover {
+a:not(.arrow):hover {
     background-color: var(--orange);
 }
 
@@ -107,8 +107,9 @@ hr {
 }
 
 .content {
-    width: 80%;
-    height: 80%;
+    width: 1600px;
+    max-width: 80%;
+    height: 80vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,18 +144,18 @@ hr {
 
 .arrow {
     width: 100%;
-    height: 0;
+    height: 100px;
     position: relative;
     display: block;
     text-align: center;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .arrow img {
     width: 100%;
-    height: 100px;
+    height: 100%;
     padding: 20px 0;
-    transition: 0.2s background-color ease-in-out;
 }
 
 .up img:hover {
@@ -167,10 +168,6 @@ hr {
     background-image: linear-gradient(to top,
             rgba(255, 255, 255, 0.5),
             rgba(255, 255, 255, 0));
-}
-
-.down {
-    top: -100px;
 }
 
 .card {
@@ -288,24 +285,19 @@ hr {
 
     .content {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         gap: 48px;
         overflow: auto;
     }
 
-    .content>img {
-        width: 35vw;
-    }
-
+    .content>img,
     .collage {
         width: 35vw;
+        max-width: 30vh;
+        object-fit: cover;
     }
 
-    .text-block:not(.first-block) {
-        width: 100%;
-    }
-
-    .first-block {
+    .text-block {
         width: 90%;
     }
 
@@ -322,14 +314,8 @@ hr {
         background-color: transparent;
     }
 
-    .arrow img {
-        height: 70px;
-        max-height: 20vh;
-        padding: 12px;
-    }
-
-    .down {
-        top: -70px;
+    .arrow {
+        height: 80px;
     }
 
     .first-block {
@@ -356,6 +342,7 @@ hr {
 
     hr {
         margin: 12px auto;
+        width: 50%;
     }
 
     .text-large,
@@ -375,8 +362,16 @@ hr {
         width: 70vw;
     }
 
+    .arrow {
+        height: 5vh;
+    }
+
+    .arrow img {
+        padding: 0;
+    }
+
     .nav {
-        align-items: normal;
+        height: 48px;
     }
 
     .nav a {
@@ -386,11 +381,7 @@ hr {
 
     .nav img {
         object-fit: cover;
-        width: 40px;
-    }
-
-    .header {
-        height: calc(100vh - 80px);
+        width: 48px;
     }
 
     .sidebar {
@@ -421,8 +412,18 @@ hr {
 
 @media only screen and (max-width: 330px) {
 
+    .nav {
+        height: 24px;
+    }
+
     .nav a {
         padding: 4px;
         font-size: 12px;
+    }
+
+    .nav img {
+        object-fit: cover;
+        width: 24px;
+        padding: 0;
     }
 }
