@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bill Yu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #ffe600; --column: 9.5rem; color-scheme: dark; }
+
+  body, a { color: #fff; }
+  header p, td:last-child, ul a span:last-child { color: #949494; }
+  td span, ul a span:first-child::after { color: var(--accent); }
+
+  body { margin: 0; background: #181818; font: 1rem/1.55 "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  main { display: flex; flex-direction: column; gap: 3rem; max-width: 40rem; margin: 0 auto; padding: 5rem 1.5rem 6rem; }
+  header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  header img { width: 4.5rem; height: 4.5rem; margin-bottom: 1rem; border-radius: 50%; object-fit: cover; }
+  header p { margin: 0; }
+  h1, h2 { margin: 0; font-size: 1.5rem; }
+  h2 { margin-bottom: 1rem; }
+  hr { height: 1px; margin: 0; border: 0; background: var(--accent); }
+
+  nav { display: flex; gap: 0.25rem; margin-left: -0.375rem; }
+  nav a { display: inline-flex; padding: 0.375rem; color: #666; border-radius: 6px; transition: color 0.15s; }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+  nav svg { width: 1.375rem; height: 1.375rem; fill: currentColor; }
+
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 0.3rem 0; vertical-align: top; }
+  td:first-child { width: var(--column); padding-right: 1rem; font: 0.875rem/1.75 "DM Mono", ui-monospace, monospace; white-space: nowrap; }
+  td span { font-weight: 700; }
+
+  ul { list-style: none; padding: 0; }
+  ul a { display: grid; grid-template-columns: var(--column) 1fr; column-gap: 1rem; padding: 0.3rem 0; text-decoration: none; }
+  ul a span:first-child::after { content: "\2197"; display: inline-block; margin-left: 0.3em; }
+  ul a:hover span:first-child, ul a:focus-visible span:first-child { text-decoration: underline var(--accent) 2px; text-underline-offset: 0.2em; }
+
+  @media (max-width: 34rem) {
+    :root { --column: 7.5rem; }
+    main { padding-top: 3.5rem; }
+    ul a { grid-template-columns: 1fr; padding: 0.5rem 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img alt="Headshot of Bill Yu" width="64" height="64" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A9XjFWYxUSCrCCuY6SVBVDVNf0fR3RNU1OytHb7qzTKhP4E15T8dviXd+GXi0TQnEd/NH5k9x3iU9Avueee38vnGa61PVLh5f39zIxy7tlyT7mrS6shy1sj7r0rWdM1ZC2l6ha3ar1MEqvj64NXzXwNZXer6TdLdWzXVrMD8skZKH86+ufgj4sv8Axd4M+16qAby3ma3eQADzMBSGx6/NzRYEzviKjYVKaYwpDKKCp0qFalSpGfMHxjs0vvjHdxSRlkEURI9f3YrovCQ8OWtr5Ml5bJcDnYpB2n3qr44M2o/FPUftUMdrIsBt1YZ+ZQfkc57lSOntWbbeA7r7dC19cIYWb5RHgEgdeAM/ma4sROMnZu1jvw1OUFotzrNTufDMkXl3V5HNO/3VEZI/QVs/A2FtN13xJp0O77CwhuohzgFtwP58flWHqvgGzi12Cew1BrSBxgJubnjkAgj1rr/AdjdW3i6f7NI5sEtlWViRiQjIXPuOT+dTh5pTST3LxNNyi29LHptMalzSGvRPMKCmpFNQA05pFjQvIyqo5JY4AqRnJ/EXwrbarYXGp28BOrQQ4jZDguAckEd+M4rwO/1K7mT7OzXTnI2yQtgr7HvXunjT4h2GhWUgsw91dMCqMi/u0bBIJJ6/QZr5+XVFuMyzRrKJcO3Y5PXpXPWgrqVjqw9R6xbOrshfpppj8i4kdirG4nnPyYP8KFff/wCvXvfge2e18OW3mqVklzIc9cHpn8MV8/6HqkUVpJ5NqkMSjdI+4sxA7V7ZofiqeaONHtTcRpGnmSwuC6EjunX8ajDxvNsvFz91RR2WaQmqtrf290B5Ug3f3W4YfgasE13I4TBv9ShsjGJmOXzgLycVw/ifxJYyJKjxT7i+wOxztHqBnjp2rntU16a58cXk6OWtIE8pV7DaRk4/76NaWu2yT20U6mFo3cMGxwQQetQNszdfl8Pzabp0ckkUCxIZ90zhN7HtyRn/AOvXi+to+lXBltl82wmYmJ1PA74z06V9C6t4Fsda0WzmaK3EyRKuSM8V5q3hPVNP1WSyPl3Ng5MZtrnd5YU8/If4SOxFNJPcltrVHJeG7+4vZAJDFbafCwaZ3b73cL+OK9o+HHiuDUb+QWOl3ieTGyTPKoCOMfKM5PPTt2rnND+H9jFYxNJOJ1YNIgGOWyQc/TGPzr1HwJplpZWd3tkUMxBbBA7UJRWyDmlL4mUH8S3kXiCzj+xp5L43BlJ4z0rurS883aJAsbPnaoPXHXGa4HxF9gt5beea9RHUHrIBmoNC1iTUAmoKxBjkLhCedoPT2+U0wR//2Q==">
+    <h1>Bill Yu</h1>
+    <p>I'm a software engineer in Seattle, developing performant systems at AirSignal.</p>
+    <nav aria-label="Social links">
+      <a href="https://www.linkedin.com/in/billyu32" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://github.com/blloop" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <section aria-labelledby="timeline-heading">
+    <h2>Timeline</h2>
+    <table>
+      <tbody>
+        <tr><td>2013-2021</td><td>Learned to build websites, disassembled dual screen Nintendo consoles, and trained to run in a straight line as fast as possible, all for fun </td></tr>
+        <tr><td>2021–2023</td><td><span>Frontend Educator:</span> Taught web fundamentals to many, from youth in summer camp to college students in developer organizations</td></tr>
+        <tr><td>2023-2025</td><td><span>Freelance Web Developer:</span> Crafted web applications for various small companies in the Seattle area</td></tr>
+        <tr><td>2025-2026</td><td><span>Software Engineer:</span> Working at an early stage startup, curating wonderful user experiences and experimenting with new technologies across the stack</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="projects-heading">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <a href="https://blloop.github.io/pokedex/"><span>Pokedex</span><span>Web implementation of the Generation 5 Pokedex</span></a>
+      </li>
+      <li>
+        <a href="https://blloop.itch.io/fowl-trouble-demo">
+          <span>Fowl Trouble</span><span>2D platformer demo made with Godot</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/blloop/audio-chat"><span>Audio Chat</span><span>Two way LLM speech experiment without RTC</span></a>
+      </li>
+      <li>
+        <a href="https://github.com/blloop/info-salad"><span>Info Salad</span><span>Carbon estimation as a browser extension</span></a>
+      </li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
